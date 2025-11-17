@@ -2,360 +2,236 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Kamal - GROUPE CASHPLUS | Administrateur Base de Données & Développeur">
-    <meta property="og:title" content="Kamal - Carte de Visite Professionnelle">
-    <meta property="og:description" content="Administrateur Base de Données & Développeur chez GROUPE CASHPLUS">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kamal - GROUPE CASHPLUS | Carte de Visite</title>
-    
-    <!-- QRCode.js Library - IMPORTANT: Chargé en premier -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
             padding: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-
-        .container {
-            max-width: 450px;
-            margin: 0 auto;
-        }
-
-        .qr-mode {
+        
+        .card {
             background: white;
-            border-radius: 30px;
             padding: 40px;
+            border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 450px;
+            width: 100%;
             text-align: center;
         }
-
+        
         .logo {
             width: 80px;
             height: 80px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #667eea;
             border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-            font-size: 36px;
-            color: white;
-            font-weight: bold;
-        }
-
-        h1 {
-            color: #333;
-            font-size: 28px;
-            margin-bottom: 8px;
-        }
-
-        .subtitle {
-            color: #666;
-            font-size: 18px;
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-
-        .role {
-            color: #999;
-            font-size: 14px;
-            margin-bottom: 30px;
-            line-height: 1.5;
-        }
-
-        .scan-instruction {
-            background: linear-gradient(135deg, #e8f4ff 0%, #f3e8ff 100%);
-            padding: 15px 25px;
-            border-radius: 15px;
-            color: #5e72e4;
-            font-size: 15px;
-            font-weight: 500;
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.02); opacity: 0.9; }
-        }
-
-        #qrcode {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 280px;
-            padding: 25px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin: 0 auto 30px;
-            max-width: 320px;
-        }
-
-        #qrcode canvas,
-        #qrcode img {
-            display: block !important;
-            margin: 0 auto;
-        }
-
-        .loading {
-            color: #999;
-            font-size: 14px;
-        }
-
-        .error-message {
-            background: #ffebee;
-            color: #c62828;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 20px 0;
-            display: none;
-        }
-
-        .download-section {
-            margin-top: 25px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 15px;
-        }
-
-        .btn {
-            padding: 15px 30px;
-            border: none;
-            border-radius: 15px;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            width: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-size: 36px;
             color: white;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        
+        h1 {
+            color: #333;
+            margin: 10px 0;
+            font-size: 28px;
         }
-
-        .info-text {
+        
+        h2 {
             color: #666;
+            margin: 10px 0;
+            font-size: 18px;
+            font-weight: normal;
+        }
+        
+        .role {
+            color: #999;
+            margin-bottom: 30px;
             font-size: 14px;
+        }
+        
+        .qr-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+        
+        .qr-title {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        
+        .qr-code {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            display: inline-block;
             margin-bottom: 15px;
         }
-
+        
         .contact-info {
-            margin-top: 30px;
-            padding: 25px;
+            text-align: left;
+            margin: 30px 0;
+            padding: 20px;
             background: #f8f9fa;
-            border-radius: 20px;
+            border-radius: 10px;
         }
-
+        
         .contact-item {
+            margin: 12px 0;
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin: 10px 0;
             color: #555;
             font-size: 14px;
         }
-
-        @media (max-width: 480px) {
-            .qr-mode {
-                padding: 30px 20px;
-            }
-
-            h1 {
-                font-size: 24px;
-            }
-
-            #qrcode {
-                min-height: 240px;
-                padding: 20px;
-            }
+        
+        .contact-item span:first-child {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        
+        .btn {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 5px 0;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #5a67d8;
+        }
+        
+        .btn-secondary {
+            background: #e2e8f0;
+            color: #4a5568;
+        }
+        
+        .btn-secondary:hover {
+            background: #cbd5e0;
+        }
+        
+        .error-msg {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #991b1b;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="qr-mode">
-            <div class="logo">K</div>
-            <h1>Kamal</h1>
-            <p class="subtitle">GROUPE CASHPLUS</p>
-            <p class="role">
-                Administrateur Base de Données<br>
-                & Développeur Software
+    <div class="card">
+        <div class="logo">K</div>
+        <h1>Kamal</h1>
+        <h2>GROUPE CASHPLUS</h2>
+        <p class="role">Administrateur Base de Données & Développeur</p>
+        
+        <div class="qr-section">
+            <p class="qr-title">📱 Scannez pour enregistrer le contact</p>
+            <div class="qr-code">
+                <!-- QR Code avec API QR-Server (fonctionne sur GitHub Pages) -->
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AKamal%0AORG%3AGROUPE%20CASHPLUS%0ATITLE%3AAdministrateur%20Base%20de%20Donnees%20et%20Developpeur%0ATEL%3BTYPE%3DWORK%3A%2B212%206XX%20XXX%20XXX%0ATEL%3BTYPE%3DCELL%3A%2B212%206XX%20XXX%20XXX%0AEMAIL%3Akamal%40cashplus.ma%0AADR%3BTYPE%3DWORK%3A%3B%3BCasablanca%3B%3B%3B%3BMaroc%0AURL%3Awww.cashplus.ma%0ANOTE%3AExpert%20SQL%20Server%2C%20Frappe%2FERPNext%2C%20OptiBoard%2C%20Crystal%20Reports%0AEND%3AVCARD" 
+                     alt="QR Code - Carte de Visite" 
+                     width="250" 
+                     height="250">
+            </div>
+            <p style="color: #666; font-size: 12px;">
+                Compatible avec tous les smartphones
             </p>
-            
-            <div class="scan-instruction">
+        </div>
+        
+        <div class="contact-info">
+            <div class="contact-item">
+                <span>📧</span>
+                <span>kamal@cashplus.ma</span>
+            </div>
+            <div class="contact-item">
                 <span>📱</span>
-                <span>Scannez pour ma carte de visite</span>
+                <span>+212 6XX XXX XXX</span>
             </div>
-            
-            <!-- QR Code Container -->
-            <div id="qrcode">
-                <div class="loading">Génération du QR Code...</div>
+            <div class="contact-item">
+                <span>🌐</span>
+                <span>www.cashplus.ma</span>
             </div>
-            
-            <!-- Error Message (caché par défaut) -->
-            <div id="errorMessage" class="error-message">
-                ⚠️ Erreur lors du chargement du QR Code. Actualisez la page.
-            </div>
-            
-            <div class="download-section">
-                <p class="info-text">
-                    <strong>💡 Astuce :</strong> Sauvegardez cette page dans vos favoris
-                </p>
-                <button class="btn" onclick="downloadVCard()">
-                    📥 Télécharger ma carte de visite
-                </button>
-            </div>
-            
-            <div class="contact-info">
-                <div class="contact-item">
-                    📧 kamal@cashplus.ma
-                </div>
-                <div class="contact-item">
-                    📱 +212 6XX XXX XXX
-                </div>
-                <div class="contact-item">
-                    📍 Casablanca, Maroc
-                </div>
+            <div class="contact-item">
+                <span>📍</span>
+                <span>Casablanca, Maroc</span>
             </div>
         </div>
+        
+        <button class="btn" onclick="downloadVCard()">
+            📥 Télécharger ma carte de visite
+        </button>
+        
+        <a href="https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AKamal%0AORG%3AGROUPE%20CASHPLUS%0ATITLE%3AAdministrateur%20Base%20de%20Donnees%20et%20Developpeur%0ATEL%3BTYPE%3DWORK%3A%2B212%206XX%20XXX%20XXX%0ATEL%3BTYPE%3DCELL%3A%2B212%206XX%20XXX%20XXX%0AEMAIL%3Akamal%40cashplus.ma%0AADR%3BTYPE%3DWORK%3A%3B%3BCasablanca%3B%3B%3B%3BMaroc%0AURL%3Awww.cashplus.ma%0ANOTE%3AExpert%20SQL%20Server%2C%20Frappe%2FERPNext%2C%20OptiBoard%2C%20Crystal%20Reports%0AEND%3AVCARD" 
+           class="btn btn-secondary" 
+           download="qr-code-kamal.png">
+            💾 Télécharger le QR Code
+        </a>
+        
+        <div id="error-message" class="error-msg" style="display: none;">
+            <strong>⚠️ QR Code non visible ?</strong><br>
+            Actualisez la page ou utilisez le bouton de téléchargement ci-dessus.
+        </div>
     </div>
-
+    
     <script>
-        // Configuration de la carte
-        const CARD_DATA = {
-            name: "Kamal",
-            company: "GROUPE CASHPLUS",
-            title: "Administrateur Base de Données & Développeur",
-            email: "kamal@cashplus.ma",
-            phone: "+212 6XX XXX XXX",
-            mobile: "+212 6XX XXX XXX",
-            address: "Casablanca, Maroc",
-            website: "www.cashplus.ma",
-            note: "Expert SQL Server, Frappe/ERPNext, OptiBoard v3.7, Crystal Reports"
-        };
-
-        // Fonction pour générer la vCard
-        function generateVCard() {
-            return `BEGIN:VCARD
-VERSION:3.0
-FN:${CARD_DATA.name}
-ORG:${CARD_DATA.company}
-TITLE:${CARD_DATA.title}
-TEL;TYPE=WORK:${CARD_DATA.phone}
-TEL;TYPE=CELL:${CARD_DATA.mobile}
-EMAIL:${CARD_DATA.email}
-ADR;TYPE=WORK:;;${CARD_DATA.address};;;;
-URL:${CARD_DATA.website}
-NOTE:${CARD_DATA.note}
-END:VCARD`;
-        }
-
         // Fonction pour télécharger la vCard
         function downloadVCard() {
-            try {
-                const vcard = generateVCard();
-                const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
-                const url = window.URL.createObjectURL(blob);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = 'kamal-cashplus.vcf';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                window.URL.revokeObjectURL(url);
-            } catch (error) {
-                console.error('Erreur lors du téléchargement:', error);
-                alert('Erreur lors du téléchargement. Veuillez réessayer.');
-            }
-        }
+            const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:Kamal
+ORG:GROUPE CASHPLUS
+TITLE:Administrateur Base de Données et Développeur
+TEL;TYPE=WORK:+212 6XX XXX XXX
+TEL;TYPE=CELL:+212 6XX XXX XXX
+EMAIL:kamal@cashplus.ma
+ADR;TYPE=WORK:;;Casablanca;;;;Maroc
+URL:www.cashplus.ma
+NOTE:Expert SQL Server, Frappe/ERPNext, OptiBoard, Crystal Reports
+END:VCARD`;
 
-        // Fonction pour générer le QR Code
-        function generateQRCode() {
-            try {
-                console.log('Début de la génération du QR Code...');
-                
-                // Vérifier que QRCode est disponible
-                if (typeof QRCode === 'undefined') {
-                    throw new Error('Bibliothèque QRCode non chargée');
-                }
-                
-                // Nettoyer le conteneur
-                const container = document.getElementById('qrcode');
-                container.innerHTML = '';
-                
-                // Générer la vCard
-                const vcardData = generateVCard();
-                console.log('vCard générée:', vcardData.substring(0, 50) + '...');
-                
-                // Créer le QR Code
-                const qrcode = new QRCode(container, {
-                    text: vcardData,
-                    width: 250,
-                    height: 250,
-                    colorDark: "#000000",
-                    colorLight: "#ffffff",
-                    correctLevel: QRCode.CorrectLevel.L
-                });
-                
-                console.log('QR Code généré avec succès');
-                
-            } catch (error) {
-                console.error('Erreur lors de la génération du QR Code:', error);
-                document.getElementById('qrcode').innerHTML = '<p style="color: red;">Erreur: Actualisez la page</p>';
-                document.getElementById('errorMessage').style.display = 'block';
-            }
+            const blob = new Blob([vcard], {type: 'text/vcard'});
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = url;
+            a.download = 'kamal-cashplus.vcf';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
         }
-
-        // Fonction d'initialisation avec retry
-        function initializeQRCode() {
-            if (typeof QRCode !== 'undefined') {
-                console.log('QRCode.js est chargé');
-                generateQRCode();
-            } else {
-                console.log('QRCode.js non disponible, nouvelle tentative dans 1 seconde...');
-                setTimeout(initializeQRCode, 1000);
-            }
-        }
-
-        // Attendre que la page soit complètement chargée
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initializeQRCode);
-        } else {
-            // DOM déjà chargé
-            initializeQRCode();
-        }
-
-        // Fallback : essayer après 2 secondes si rien ne s'affiche
-        setTimeout(function() {
-            const qrContainer = document.getElementById('qrcode');
-            if (qrContainer && !qrContainer.querySelector('canvas') && !qrContainer.querySelector('img')) {
-                console.log('Tentative de fallback après 2 secondes');
-                initializeQRCode();
-            }
-        }, 2000);
+        
+        // Vérifier si le QR code se charge
+        window.onload = function() {
+            const img = document.querySelector('img[alt="QR Code - Carte de Visite"]');
+            img.onerror = function() {
+                document.getElementById('error-message').style.display = 'block';
+            };
+        };
     </script>
 </body>
 </html>
