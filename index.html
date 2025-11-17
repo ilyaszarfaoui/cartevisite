@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamal - GROUPE CASHPLUS | Carte de Visite</title>
+    <title>Abdelaziz EL HARTI - Directeur Général Adjoint | Carte de Visite</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -21,54 +21,86 @@
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            max-width: 450px;
+            max-width: 500px;
             width: 100%;
             text-align: center;
         }
         
         .logo {
-            width: 80px;
-            height: 80px;
-            background: #667eea;
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
             border-radius: 20px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 36px;
+            font-size: 40px;
             color: white;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         
         h1 {
-            color: #333;
-            margin: 10px 0;
-            font-size: 28px;
+            color: #2c3e50;
+            margin: 15px 0;
+            font-size: 30px;
         }
         
-        h2 {
-            color: #666;
-            margin: 10px 0;
+        .subtitle {
+            color: #e74c3c;
             font-size: 18px;
-            font-weight: normal;
+            font-weight: bold;
+            margin: 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
-        .role {
-            color: #999;
-            margin-bottom: 30px;
+        .services {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .services-title {
+            color: #2c3e50;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .service-list {
+            text-align: left;
+            color: #555;
             font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .service-item {
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-item:before {
+            content: "✓";
+            color: #e74c3c;
+            font-weight: bold;
+            margin-right: 10px;
         }
         
         .qr-section {
-            background: #f8f9fa;
-            padding: 20px;
+            background: linear-gradient(135deg, #fff5f5, #ffe0e0);
+            padding: 25px;
             border-radius: 15px;
             margin: 30px 0;
         }
         
         .qr-title {
-            color: #333;
-            font-size: 16px;
+            color: #c0392b;
+            font-size: 18px;
             margin-bottom: 20px;
             font-weight: bold;
         }
@@ -79,85 +111,106 @@
             border-radius: 10px;
             display: inline-block;
             margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .qr-image {
+            display: block;
+            width: 250px;
+            height: 250px;
         }
         
         .contact-info {
             text-align: left;
             margin: 30px 0;
-            padding: 20px;
+            padding: 25px;
             background: #f8f9fa;
             border-radius: 10px;
         }
         
         .contact-item {
-            margin: 12px 0;
+            margin: 15px 0;
             display: flex;
             align-items: center;
-            color: #555;
-            font-size: 14px;
+            color: #2c3e50;
+            font-size: 15px;
         }
         
         .contact-item span:first-child {
-            margin-right: 10px;
-            font-size: 18px;
+            margin-right: 12px;
+            font-size: 20px;
         }
         
         .btn {
             display: inline-block;
             width: 100%;
             padding: 15px;
-            background: #667eea;
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
             color: white;
             text-decoration: none;
             border-radius: 10px;
             font-size: 16px;
             font-weight: bold;
-            margin: 5px 0;
+            margin: 8px 0;
             border: none;
             cursor: pointer;
+            transition: all 0.3s;
         }
         
         .btn:hover {
-            background: #5a67d8;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
         }
         
         .btn-secondary {
-            background: #e2e8f0;
-            color: #4a5568;
+            background: #ecf0f1;
+            color: #2c3e50;
         }
         
         .btn-secondary:hover {
-            background: #cbd5e0;
+            background: #bdc3c7;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
-        .error-msg {
-            background: #fef2f2;
-            border: 1px solid #fecaca;
-            color: #991b1b;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 20px;
-            font-size: 14px;
+        .badge {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin: 5px;
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <div class="logo">K</div>
-        <h1>Kamal</h1>
-        <h2>GROUPE CASHPLUS</h2>
-        <p class="role">Administrateur Base de Données & Développeur</p>
+        <div class="logo">AE</div>
+        <h1>Abdelaziz EL HARTI</h1>
+        <p class="subtitle">Directeur Général Adjoint</p>
+        
+        <div class="services">
+            <p class="services-title">📋 Étude et Réalisation</p>
+            <div class="service-list">
+                <div class="service-item">Plomberie Professionnelle</div>
+                <div class="service-item">Chauffage Central</div>
+                <div class="service-item">Piscines - Installation & Entretien</div>
+                <div class="service-item">Adduction d'Eau</div>
+                <div class="service-item">Climatisation</div>
+                <div class="service-item">Peinture & Finitions</div>
+                <div class="service-item">Faux Plafonds (F.A.C)</div>
+            </div>
+        </div>
         
         <div class="qr-section">
             <p class="qr-title">📱 Scannez pour enregistrer le contact</p>
             <div class="qr-code">
-                <!-- QR Code avec API QR-Server (fonctionne sur GitHub Pages) -->
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AKamal%0AORG%3AGROUPE%20CASHPLUS%0ATITLE%3AAdministrateur%20Base%20de%20Donnees%20et%20Developpeur%0ATEL%3BTYPE%3DWORK%3A%2B212%206XX%20XXX%20XXX%0ATEL%3BTYPE%3DCELL%3A%2B212%206XX%20XXX%20XXX%0AEMAIL%3Akamal%40cashplus.ma%0AADR%3BTYPE%3DWORK%3A%3B%3BCasablanca%3B%3B%3B%3BMaroc%0AURL%3Awww.cashplus.ma%0ANOTE%3AExpert%20SQL%20Server%2C%20Frappe%2FERPNext%2C%20OptiBoard%2C%20Crystal%20Reports%0AEND%3AVCARD" 
-                     alt="QR Code - Carte de Visite" 
-                     width="250" 
-                     height="250">
+                <!-- QR Code généré avec l'API QR-Server -->
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AAbdelaziz%20EL%20HARITI%0AORG%3AServices%20Techniques%20EL%20HARITI%0ATITLE%3AExpert%20Plomberie%20Chauffage%20Climatisation%0ATEL%3BTYPE%3DWORK%3A%2B212522865815%0ATEL%3BTYPE%3DCELL%3A%2B212661191609%0AEMAIL%3Acontact%40elhariti.ma%0AADR%3BTYPE%3DWORK%3A%3B%3BRoute%20de%20Zenata%20Lot%20Bio%20N2%20AIN%20Sebaa%3BCasablanca%3B%3B20250%3BMaroc%0ANOTE%3APlomberie%20Chauffage%20Piscines%20Climatisation%20Peinture%20FAC%0AEND%3AVCARD" 
+                     alt="QR Code - Carte de Visite"
+                     class="qr-image">
             </div>
-            <p style="color: #666; font-size: 12px;">
+            <p style="color: #666; font-size: 13px;">
                 Compatible avec tous les smartphones
             </p>
         </div>
@@ -165,19 +218,23 @@
         <div class="contact-info">
             <div class="contact-item">
                 <span>📧</span>
-                <span>kamal@cashplus.ma</span>
+                <span>contact@etselharti.com</span>
             </div>
             <div class="contact-item">
                 <span>📱</span>
-                <span>+212 6XX XXX XXX</span>
+                <span>05 22 66 38 15</span>
             </div>
             <div class="contact-item">
-                <span>🌐</span>
-                <span>www.cashplus.ma</span>
+                <span>📱</span>
+                <span>06 61 49 16 03</span>
             </div>
             <div class="contact-item">
                 <span>📍</span>
-                <span>Casablanca, Maroc</span>
+                <span>Route de Zenata, Lot Rio N°2 - Aïn Sebaâ</span>
+            </div>
+            <div class="contact-item">
+                <span>🏢</span>
+                <span>Casablanca 20250, Maroc</span>
             </div>
         </div>
         
@@ -185,15 +242,16 @@
             📥 Télécharger ma carte de visite
         </button>
         
-        <a href="https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AKamal%0AORG%3AGROUPE%20CASHPLUS%0ATITLE%3AAdministrateur%20Base%20de%20Donnees%20et%20Developpeur%0ATEL%3BTYPE%3DWORK%3A%2B212%206XX%20XXX%20XXX%0ATEL%3BTYPE%3DCELL%3A%2B212%206XX%20XXX%20XXX%0AEMAIL%3Akamal%40cashplus.ma%0AADR%3BTYPE%3DWORK%3A%3B%3BCasablanca%3B%3B%3B%3BMaroc%0AURL%3Awww.cashplus.ma%0ANOTE%3AExpert%20SQL%20Server%2C%20Frappe%2FERPNext%2C%20OptiBoard%2C%20Crystal%20Reports%0AEND%3AVCARD" 
+        <a href="https://api.qrserver.com/v1/create-qr-code/?size=500x500&data=BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AAbdelaziz%20EL%20HARITI%0AORG%3AServices%20Techniques%20EL%20HARITI%0ATITLE%3AExpert%20Plomberie%20Chauffage%20Climatisation%0ATEL%3BTYPE%3DWORK%3A%2B212522865815%0ATEL%3BTYPE%3DCELL%3A%2B212661191609%0AEMAIL%3Acontact%40elhariti.ma%0AADR%3BTYPE%3DWORK%3A%3B%3BRoute%20de%20Zenata%20Lot%20Bio%20N2%20AIN%20Sebaa%3BCasablanca%3B%3B20250%3BMaroc%0ANOTE%3APlomberie%20Chauffage%20Piscines%20Climatisation%20Peinture%20FAC%0AEND%3AVCARD" 
            class="btn btn-secondary" 
-           download="qr-code-kamal.png">
+           download="qr-code-elhariti.png">
             💾 Télécharger le QR Code
         </a>
         
-        <div id="error-message" class="error-msg" style="display: none;">
-            <strong>⚠️ QR Code non visible ?</strong><br>
-            Actualisez la page ou utilisez le bouton de téléchargement ci-dessus.
+        <div style="margin-top: 25px;">
+            <span class="badge">✓ Devis Gratuit</span>
+            <span class="badge">✓ Intervention 24/7</span>
+            <span class="badge">✓ Garantie</span>
         </div>
     </div>
     
@@ -202,34 +260,48 @@
         function downloadVCard() {
             const vcard = `BEGIN:VCARD
 VERSION:3.0
-FN:Kamal
-ORG:GROUPE CASHPLUS
-TITLE:Administrateur Base de Données et Développeur
-TEL;TYPE=WORK:+212 6XX XXX XXX
-TEL;TYPE=CELL:+212 6XX XXX XXX
-EMAIL:kamal@cashplus.ma
-ADR;TYPE=WORK:;;Casablanca;;;;Maroc
-URL:www.cashplus.ma
-NOTE:Expert SQL Server, Frappe/ERPNext, OptiBoard, Crystal Reports
+FN:Abdelaziz EL HARITI
+ORG:Services Techniques EL HARITI
+TITLE:Expert Plomberie - Chauffage - Climatisation
+TEL;TYPE=WORK:+212522865815
+TEL;TYPE=CELL:+212661191609
+EMAIL:contact@elhariti.ma
+ADR;TYPE=WORK:;;Route de Zenata Lot Bio N°2 AIN Sebaa;Casablanca;;20250;Maroc
+NOTE:Étude et Réalisation : Plomberie, Chauffage Central, Piscines, Adduction d'Eau, Climatisation, Peinture, F.A.C
 END:VCARD`;
 
-            const blob = new Blob([vcard], {type: 'text/vcard'});
+            const blob = new Blob([vcard], {type: 'text/vcard;charset=utf-8'});
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.style.display = 'none';
             a.href = url;
-            a.download = 'kamal-cashplus.vcf';
+            a.download = 'abdelaziz-elhariti.vcf';
             document.body.appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url);
             document.body.removeChild(a);
+            
+            alert('✅ Carte de visite téléchargée !');
         }
         
         // Vérifier si le QR code se charge
         window.onload = function() {
-            const img = document.querySelector('img[alt="QR Code - Carte de Visite"]');
+            const img = document.querySelector('.qr-image');
             img.onerror = function() {
-                document.getElementById('error-message').style.display = 'block';
+                console.log('Erreur de chargement du QR Code - Utilisation d\'une alternative');
+                // Alternative : afficher les infos texte
+                const qrContainer = document.querySelector('.qr-code');
+                qrContainer.innerHTML = `
+                    <div style="padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                        <p style="font-size: 48px; margin-bottom: 10px;">📱</p>
+                        <p style="color: #666; font-size: 14px;">
+                            <strong>Abdelaziz EL HARITI</strong><br>
+                            📱 05 22 86 58 15<br>
+                            📱 06 61 19 16 09<br>
+                            📧 contact@elhariti.ma
+                        </p>
+                    </div>
+                `;
             };
         };
     </script>
